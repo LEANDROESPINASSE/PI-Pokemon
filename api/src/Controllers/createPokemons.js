@@ -20,8 +20,7 @@ async function createPokemon(
   height,
   weight,
   image,
-  types,
-  createdInDb
+  types
 ) {
   
   if (name) {
@@ -43,8 +42,8 @@ async function createPokemon(
         speed,
         height,
         weight,
-        image,
-        createdInDb,
+        image: image.length ? image : "https://assets.stickpng.com/images/5a0596df9cf05203c4b60445.png",
+        createdInDb: true
       });
 
       let dbType = await Type.findAll({

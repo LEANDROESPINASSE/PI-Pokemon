@@ -5,7 +5,7 @@ import axios from "axios"
 const RUTA_GET_POKEMON = "http://localhost:3001/pokemons";
 const GET_POKEMON_DETAIL = "http://localhost:3001/pokemons/";
 const RUTA_GET_TYPE = "http://localhost:3001/types";
-const RUTA_POST = "http://localhost:3001/pokemons/create";
+const RUTA_POST = "http://localhost:3001/pokemons";
 const RUTA_GET_NAME = "http://localhost:3001/pokemons?name="
 
 //------------------------ RENDER/HOME ------------------------------
@@ -14,6 +14,7 @@ export function getAllPokemon() {
     return async function(dispatch) {
         try {
             let allPoke = await axios.get(RUTA_GET_POKEMON)
+            console.log(allPoke)
             return dispatch({
                 type: "GET_ALL_POKEMON",
                 payload: allPoke.data
@@ -77,13 +78,15 @@ export function getPokemonType(){
 export function postPokemon(payload) {
     return async function(dispatch) {
         try {
+            console.log(payload)
             let createPoke = axios.post(RUTA_POST, payload)
             return dispatch({
                 type: "POST_POKEMON",
                 payload: createPoke.data
             })
         } catch(error) {
-            alert("Error creating a new Pokemon", error)
+            console.log(error)
+            // alert("Error creating a new Pokemon", error)
         }
     }
 }
@@ -92,13 +95,10 @@ export function getPokemonName(name) {
     return async function(dispatch) {
         try {
             let namePoke = await axios.get(`${RUTA_GET_NAME}${name}`)
-            console.log(namePoke)
-                dispatch({
+            return dispatch({
                 type: "GET_POKEMON_NAME",
                 payload: namePoke.data
-            })
-            console.log("putamadre")
-            return
+            })     
         } catch(error) {
             alert("Error getting that Pokemon", error)
         }

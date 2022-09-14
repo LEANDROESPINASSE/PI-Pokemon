@@ -61,8 +61,8 @@ export default function Create(){
         } else if (input.types.length > 2) {
             errors.types = "You cant choose more than two types"
 
-        } else if (!/(https?:\/\/.*\.(?:png))/i.test(input.image)) {
-            errors.image = 'El formato de la imagen debe ser ".png".'           
+        // } else if (!/(https?:\/\/.*\.(?:png))/i.test(input.image)) {
+        //     errors.image = 'El formato de la imagen debe ser ".png".'           
         
         } return errors
     }
@@ -76,6 +76,7 @@ useEffect(() => {
 },[input])
 
 function handleChange(e) {
+    console.log(input)
     setInput({
         ...input,
         [e.target.name] : e.target.value
@@ -87,14 +88,15 @@ function handleChange(e) {
 }
 
 function handleCheck(e) {
-    let check = e.target.check
-        if(check) {
+    console.log(input.types)
+    let checked = e.target.checked
+        if(checked) {
             setInput({
                 ...input,
                 types: [...input.types,e.target.value]
             })
         }
-        if(!check) {
+        if(!checked) {
             setInput({
                 ...input,
                 types: input.types.filter(ele=>ele!==e.target.value)
@@ -132,71 +134,71 @@ return (
             <form id="form" onSubmit={(e)=>handleSubmit(e)}>
         <div className="createpoke">
             <div>
-                <p>
+                <div>
                     <label className="form1">Pokemon Name</label>
                     <input type="text" value={input.name} name="name" className="input" onChange={(e) => handleChange(e)} />
                     {errors.name && (
                         <p className="error">{errors.name}</p>
                     )}
-                </p>
+                </div>
 
-                <p>
+                <div>
                     <label className="form1">Pokemon Health</label>
                     <input type="number" value={input.hp} name="hp"  className="input" onChange={(e) => handleChange(e)} />
                     {errors.hp && (
                         <p className="error">{errors.hp}</p>
                     )}
-                </p>
+                </div>
 
-                <p>
+                <div>
                     <label className="form1">Pokemon Attack</label>
                     <input type="number" value={input.attack} name="attack" className="input" onChange={(e) => handleChange(e)} />
                     {errors.attack && (
                         <p className="error">{errors.attack}</p>
                     )}
-                </p>
+                </div>
 
-                <p>
+                <div>
                     <label className="form1">Pokemon Defense</label>
                     <input type="number" value={input.defense} name="defense" className="input" onChange={(e) => handleChange(e)} />
                     {errors.defense && (
                         <p className="error">{errors.defense}</p>
                     )}
-                </p>
+                </div>
 
-                <p>
+                <div>
                     <label className="form1">Pokemon Speed</label>
                     <input type="number" value={input.speed} name="speed" className="input" onChange={(e) => handleChange(e)} />
                     {errors.speed && (
                         <p className="error">{errors.speed}</p>
                     )}
-                </p>
+                </div>
 
-                <p>
+                <div>
                     <label className="form1">Pokemon Weight</label>
                     <input type="number" value={input.weight} name="weight" className="input" onChange={(e) => handleChange(e)} />
                     {errors.weight && (
                         <p className="error">{errors.weight}</p>
                     )}
-                </p>
+                </div>
 
-                <p>
+                <div>
                     <label className="form1">Pokemon Height</label>
                     <input type="number" value={input.height} name="height" className="input" onChange={(e) => handleChange(e)} />
                     {errors.height && (
                         <p className="error">{errors.height}</p>
                     )}
-                </p>
+                </div>
 
-                <p>
+                <div>
                     <label className="form1" >Upload an image for your Pokemon</label>
                     <input type="text" value={input.image} name="image" className="input" onChange={(e) => handleChange(e)} />
                     {errors.image && (
                         <p className="error">{errors.image}</p>
                     )}
-                </p>
+                </div>
 
-                <p>
+                <div>
                         <label className="form1">Choose Pokemon Type</label>
                             <div className="form1">
                             {types.map((a)=>{
@@ -208,7 +210,7 @@ return (
                     {errors.types&& (
                             <p className="form1">{errors.types}</p>
                     )}
-                </p>
+                </div>
 
             </div>
                 <Link to="/home"><button className="lettersB">Back</button></Link>

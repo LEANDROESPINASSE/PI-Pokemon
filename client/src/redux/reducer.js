@@ -24,7 +24,7 @@ const rootReducer = (state = initialState, action) => {
 
             return {
                 ...state,
-                pokemons: [...action.payload]
+                pokemons: [action.payload]
             }
 
         case "GET_POKEMON_TYPE":

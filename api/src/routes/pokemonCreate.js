@@ -6,9 +6,9 @@ router.post("/pokemons", async (req, res) => {
 
     try {
 
-        let { name, hp, attack, defense, speed, height, weight, types, image, createdInDb } = req.body
+        let { name, hp, attack, defense, speed, height, weight, types, image } = req.body
         
-        let pokeCreate = await createPokemon(name, hp, attack, defense, speed, height, weight, image, types, createdInDb)
+        let pokeCreate = await createPokemon(name, hp, attack, defense, speed, height, weight, image, types )
 
         return res.status(200).json(pokeCreate)
     

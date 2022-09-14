@@ -6,9 +6,9 @@ import "../Styles/SearchBar.css"
 import pokeball from "../Images/pokeball.png"
 
 export default function SearchBar({setCurrent}) {
-
-    const dispatch = useDispatch()
+    
     const [ name, setName ] = useState("")
+    const dispatch = useDispatch()
 
     function handleinput(e) {
         e.preventDefault()
@@ -27,28 +27,19 @@ export default function SearchBar({setCurrent}) {
     }
 
     return(
-        // <div className="search">
-        //     <input 
-        //     className="search__input"
-        //     type="text"
-        //     placeholder="Poke Search" 
-        //     value={name} 
-        //     onChange={(e) => handleinput(e)}
-        //     />
-        //     <img src={pokeball} alt="pokeball" 
-        //         className="search__icon"
-        //         type="submit"
-        //         onClick={(e)=>handleSubmit(e)}/> 
-        // </div>
-        
-            <>
-                <form className="search" onSubmit={(e) => handleSubmit(e)}>
-                    <input className="search__input" type='text' value={name} onChange={(e) => handleinput(e)} placeholder="Poke Search" />
-                    <button type='submit'><img className="search__icon" src={pokeball} alt="pokeball" /></button>
-                </form>
-            </>
-
-
+        <div className="search">
+            <input 
+            className="search__input"
+            type="text"
+            placeholder="Poke Search" 
+            value={name} 
+            onChange={(e) => handleinput(e)}
+            />
+            <img src={pokeball} alt="pokeball" 
+                className="search__icon"
+                type="submit"
+                onClick={(e)=>handleSubmit(e)}/> 
+        </div>
 
     )
 }
