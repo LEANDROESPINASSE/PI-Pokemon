@@ -1,0 +1,38 @@
+.aboutback{
+    position: relative;
+    background-image: url(../Images/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+.about {
+    margin-top: 240px;
+    position: relative;
+    align-items: center;
+    margin-left: 30px;
+    font-size: 30px;
+    cursor: pointer;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.about:hover {
+    background-color: transparent;
+    opacity: 90%;
+    filter: blur(1px);
+}
+
+
+
+.text {
+    color: rgb(0, 0, 0);
+    font-family: Arial;
+    font-size: 30px;    
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+}

@@ -1,0 +1,37 @@
+
+.landing {
+    background-image: url(../Images/2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color:black;
+
+    min-height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+.tittle{
+    font-family: Arial;
+    text-shadow: 15px 5px 5px black;
+    padding-top: 190px;
+    margin-left: 600px ;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    border: none;
+    text-shadow: 100px 100px 100px black;
+    align-items: center;
+    margin-right: 2000px;
+    margin-left: 400px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn:hover  {
+    background-color: transparent;
+    opacity: 65%;
+}
+
