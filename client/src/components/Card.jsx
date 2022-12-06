@@ -9,7 +9,7 @@ export default function Card({name, image, types, id}) {
         <div className="card2" key={id}>
             <h3 className="name">{name.toUpperCase()}</h3>
                 <img src={image ? image : defaultImage} alt={`${name}`} width="400em"/>
-            <h5 className="text">TYPE {types.map(el=>
+            <h5 className="texttype">TYPE {types.map(el=>
                 types.length>1 ?` - ${el.charAt(0).toUpperCase()+el.slice(1)}`:`${el.charAt(0).toUpperCase()+el.slice(1)} `)}</h5>
         </div>
 

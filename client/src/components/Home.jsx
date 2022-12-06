@@ -112,7 +112,7 @@ return (
         <div className="first1">
 
             <div className="inline1">
-            <label className="label">Alpahabet -
+            <label className="label">Alpahabet
                 <select className="filter" onChange={e => handleNameSort(e)}>
                     <option value="none">None</option>
                     <option value="a-z">a-z</option>
@@ -122,7 +122,7 @@ return (
             </div>
 
             <div className="inline1">
-            <label className="label">Attack -
+            <label className="label">Attack
                 <select className="filter" onChange={e => handleAttackSort(e)}>
                     <option value="attack">attack</option>
                     <option value="max">max</option>
@@ -132,7 +132,7 @@ return (
             </div>
 
             <div className="inline1">
-            <label className="label">Type Selector - 
+            <label className="label">Type Selector
                 <select className="filter" onChange={e => handlefilterPokemon(e)}>
                     <option value="all">All</option>
                         {types.map(ele=>{
@@ -145,7 +145,7 @@ return (
             </div>
             
             <div className="inline1">
-            <label className="label">From -
+            <label className="label">From
                 <select className="filter" onChange={e => handlefilterPokemonCreated(e)}>
                     <option value="all">All</option>
                     <option value="created">Pokemons from Db</option>

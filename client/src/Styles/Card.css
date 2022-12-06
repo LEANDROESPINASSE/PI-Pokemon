@@ -4,6 +4,7 @@
   text-decoration: none; 
 } 
 
-.text {
+.texttype {
+    color: white;
     font-size: 30px;
 }

@@ -59,9 +59,9 @@ return (
 
         
         </div>
-        <Link to="/home">
+            <Link to="/home">
                 <button className="buttonB">Back Home</button>
-        </Link>
+            </Link>
     </div>
 )
 }

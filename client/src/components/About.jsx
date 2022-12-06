@@ -8,12 +8,12 @@ export default function About() {
             <Link to="/home">
                 <button className="about">Back Home</button>
             </Link>
-            <Link to="https://www.linkedin.com/in/leandro-espinasse/">
+            <a href="https://www.linkedin.com/in/leandro-espinasse/">
                 <button className="about">My LinkedIn profile</button>
-            </Link>
-            <Link to="https://github.com/LEANDROESPINASSE">
+            </a>
+            <a href="https://github.com/LEANDROESPINASSE">
                 <button className="about">My GitHub profile</button>
-            </Link>
+            </a>
             <h5 className="text">
                 <p>
                 This project is a Simple Web Application, witch allows you to search pokemons 

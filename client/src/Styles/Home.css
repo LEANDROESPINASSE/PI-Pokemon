@@ -18,6 +18,7 @@
 }
 
 .button1 {
+    color: white;
     position: relative;
     border: none;
     text-shadow: 0px 0px 20px black;
@@ -53,10 +54,6 @@
     display: inline-block;
 }
 
-.first1 {
-    text-align: left;
-}
-
 .inline1 {
     padding: 10px;
     margin: 10px;
@@ -64,8 +61,10 @@
 }
 
 .label {
+    text-align: center;
+    color: white;
     font-size: 25px;
-    padding-right: 20px;
+    margin-right: 20%;
     text-shadow: 0px 0px 4px black;
 }
 
